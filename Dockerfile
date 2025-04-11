@@ -9,7 +9,7 @@ FROM alpine:3.21
 
 WORKDIR /app
 COPY --from=builder /app/glance .
-COPY --from=builder /app/config/glance.yml /app/config/
+#COPY --from=builder /app/config/glance.yml /app/config/
 RUN ls -lR
 
 HEALTHCHECK --timeout=10s --start-period=60s --interval=60s \
